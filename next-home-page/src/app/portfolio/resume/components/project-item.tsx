@@ -11,7 +11,7 @@ export interface ProcjetItemProps {
 }
 const ProcjetItem = ({ images }: ProcjetItemProps) => {
   return (
-    <div className='flex h-full min-h-[300px] w-full items-center justify-center bg-white'>
+    <div className='flex h-full min-h-[480px] w-full items-center justify-center bg-white'>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={50}
@@ -21,10 +21,10 @@ const ProcjetItem = ({ images }: ProcjetItemProps) => {
         }}
         loop
         pagination={{ clickable: true }}
-        style={{ height: '100%', width: '100%', minHeight: '300px' }}
+        style={{ height: '100%', width: '100%', minHeight: '480px' }}
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className='w-full h-full'>
             <Image
               src={image}
               fill
@@ -32,7 +32,8 @@ const ProcjetItem = ({ images }: ProcjetItemProps) => {
               priority
               sizes='(max-width:700px) 300px, 100vw'
               style={{
-                objectFit: 'contain' // cover, contain, none
+                objectFit: 'contain', // cover, contain, none
+                minHeight: '480px'
               }}
               alt={`Slide ${index}`}
             />
