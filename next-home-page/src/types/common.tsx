@@ -34,20 +34,22 @@ export type ProjectDetail = {
   process: string[]
 }
 
-export type PorjectInfo = {
+export type ProjectInfo = {
   images: string[]
-  participants: number
+  detail: ProjectInfoDetail
+}
+
+type ProjectInfoDetail = {
+  title: string
+  dateAndparticipants: string
   desc: string
   features: string
+  url?: string
   stackList: string[]
 }
 
-export type PageHeaderInfo = {
-  
-}
-
 export type HeaderInfo = {
-  title: string 
+  title: string
   scrollIndex: number
 }
 

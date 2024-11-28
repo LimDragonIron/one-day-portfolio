@@ -4,6 +4,7 @@ import React, { ForwardedRef } from 'react'
 import Image from 'next/image'
 import IntroItem from './intro-Item'
 import SectionTitle from '@/components/common/section-title'
+import { motion } from 'framer-motion'
 
 export interface HeroSectionProps {}
 
@@ -27,7 +28,23 @@ const introItems = [
 const HeroSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
   (props, ref) => {
     return (
-      <div className='flex w-full flex-col gap-16' ref={ref}>
+      <motion.div
+        className='flex w-full flex-col gap-16'
+        ref={ref}
+        initial={{ translateY: 0, opacity: 0 }}
+        whileInView={{
+          translate: -20,
+          opacity: 1
+        }}
+        transition={{
+          delay: 0.6,
+          x: { duration: 1 },
+          default: { ease: 'linear' }
+        }}
+        viewport={{
+          once: true
+        }}
+      >
         <SectionTitle title='ABOUT ME' />
         <div className='flex w-full flex-col justify-center gap-8 rounded-xl lg:flex-row'>
           <div className='flex min-w-[240px] items-center justify-center'>
@@ -59,7 +76,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 )

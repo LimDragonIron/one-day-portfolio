@@ -1,4 +1,4 @@
-import { CareerInfo, ProjectDetail } from '@/types/common'
+import { CareerInfo, ProjectDetail, ProjectInfo } from '@/types/common'
 
 const projectListGX: ProjectDetail[] = [
   {
@@ -186,5 +186,76 @@ export const careerList: CareerInfo[] = [
     date: '2016.03 - 2019.03',
     role: '명지대학교 졸업 후 석사과정으로 입학하여 국과 과제를 수행하고 졸업 하였습니다.',
     projectList: projectListMju
+  }
+]
+
+export const projectCardList: ProjectInfo[] = [
+  {
+    images: ['/images/pj-1-1.png', '/images/pj-1-2.png', '/images/pj-1-3.png'],
+    detail: {
+      title: '학생을 위한 문해력 향상 AI 사이트(PoC)',
+      dateAndparticipants: '2024.04 - 2024.08 (1人)',
+      desc: `학생들의 문해력 향상을 위한 웹 기반 학습 플랫폼 입니다.
+      LangChain JS의 RAG 기능과 OpenAI의 GPT-4o 모델를 사용하여 지문을 읽고
+      문제 생성 맟 생성된 문제의 모범 답안을 만들고, 학생의 답변에 대한 평가, 선생님의 피드백을 PDF로 출력 하는 기능이 있습니다.
+      `,
+      features: 'GPT-4o를 활용한 문제 생성 및 채점',
+      stackList: [
+        'Next',
+        'Nest',
+        'LangChain',
+        'MySQL',
+        'Azure',
+        'Docker',
+        'chromaDB',
+        'Prisma',
+        'shadcn/ui',
+        'taillwindcss'
+      ]
+    }
+  },
+  {
+    images: ['/images/pj-2-1.png', '/images/pj-2-2.png', '/images/pj-2-3.png'],
+    detail: {
+      title: '삼성 TV 앱 개발 홍보 사이트 개발',
+      dateAndparticipants: '2023.01 - 2023.01 (1人)',
+      desc: `삼성 TV 앱 개발에 관련하여 내용을 소개하고 홍보하는 사이트 개발
+      Next JS와 Framer motion을 사용하여 개발`,
+      features: '앱 개발에 대한 내용 및 소개',
+      stackList: ['Next', 'Framer motion']
+    }
+  },
+  {
+    images: [
+      '/images/pj-3-1.png',
+      '/images/pj-3-2.png',
+      '/images/pj-3-3.png',
+      '/images/pj-3-4.png'
+    ],
+    detail: {
+      title: '삼성 스마트 TV 앱 CMS 사이트 개발 (SEP)',
+      dateAndparticipants: '2022.04 - 2023.12 (4人)',
+      desc: `Samsung Experience Plus는 삼성전자의 다양한 제품과 콘텐츠를 탐색할 수 있는 TV App입니다.
+      이 앱에서 사용되는 모든 컨텐츠 및 데이터를 관리하는 CMS사이트를 개발하였습니다.
+      `,
+      features: '모든 컨텐츠의 데이터 관리',
+      stackList: ['Vue', 'Vuetify', 'Express', 'MySQL', 'AWS']
+    }
+  },
+  {
+    images: [
+      '/images/pj-4-1.webp',
+      '/images/pj-4-2.webp',
+      '/images/pj-4-3.webp'
+    ],
+    detail: {
+      title: '유니티 2D 디펜스 게임 (Android)',
+      dateAndparticipants: '2020.01 - 2020.05 (1人)',
+      desc: `유니티를 사용하여 2D 디펜스 게임을 개발하고 출시하였습니다.
+      `,
+      features: '2D 디펜스 게임',
+      url: 'https://apkpure.com/kr/mollangdefense/com.Limd.Mallang',
+      stackList: ['Unity 2D']
+    }
   }
 ]

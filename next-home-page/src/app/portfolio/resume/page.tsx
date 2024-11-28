@@ -32,22 +32,22 @@ const ResumePage = () => {
     switch (index) {
       case 0:
         return window.scrollTo({
-          top: heroSectionRef.current?.offsetTop! - (!isMobile ? 72 : 0),
+          top: heroSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
           behavior: 'smooth'
         })
       case 1:
         return window.scrollTo({
-          top: skillSectionRef.current?.offsetTop! - (!isMobile ? 72 : 0),
+          top: skillSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
           behavior: 'smooth'
         })
       case 2:
         return window.scrollTo({
-          top: projectSectionRef.current?.offsetTop! - (!isMobile ? 72 : 0),
+          top: projectSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
           behavior: 'smooth'
         })
       case 3:
         return window.scrollTo({
-          top: careerSectionRef.current?.offsetTop! - (!isMobile ? 72 : 0),
+          top: careerSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
           behavior: 'smooth'
         })
     }
@@ -56,11 +56,8 @@ const ResumePage = () => {
   const sectionMethods = useMemo(() => ({ scrollToSection }), [scrollToSection])
 
   return (
-    <section className='flex flex-col h-full w-full justify-center items-center overflow-scroll py-6'>
-      <PageHeader
-        headerInfo={headers}
-        scrollMethod={sectionMethods}
-      />
+    <section className='flex h-full w-full flex-col items-center justify-center overflow-scroll py-6'>
+      <PageHeader headerInfo={headers} scrollMethod={sectionMethods} />
       <div className='flex h-full w-full max-w-[84.00rem] flex-col justify-center gap-8 p-4 sm:p-8 md:p-12 lg:gap-24 lg:p-16'>
         <HeroSection ref={heroSectionRef} />
         <div className='flex w-full items-center justify-center md:items-end md:justify-end'>
