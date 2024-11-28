@@ -11,7 +11,7 @@ export interface ProcjetItemProps {
 }
 const ProcjetItem = ({ images }: ProcjetItemProps) => {
   return (
-    <div className='flex h-full w-full items-center justify-center bg-white'>
+    <div className='flex h-full min-h-[300px] w-full items-center justify-center bg-white'>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         spaceBetween={50}
