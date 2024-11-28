@@ -1,5 +1,4 @@
 import HomeCard from '@/app/(site)/components/home-card'
-import Image from 'next/image'
 import { Gamepad2, IdCard, NotebookText } from 'lucide-react'
 
 const titleItems = [

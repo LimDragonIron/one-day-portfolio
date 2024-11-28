@@ -4,7 +4,6 @@ import ProjectCard from './project-card'
 import { motion } from 'framer-motion'
 import { projectCardList } from '@/constants/constants'
 
-export interface ProjectSectionProps {}
 const ProjectSection = React.forwardRef<
   HTMLDivElement,
   React.PropsWithChildren
@@ -44,5 +43,7 @@ const ProjectSection = React.forwardRef<
     </motion.div>
   )
 })
+
+ProjectSection.displayName = 'ProjectSection'
 
 export default ProjectSection

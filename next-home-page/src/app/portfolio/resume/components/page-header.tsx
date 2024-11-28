@@ -1,7 +1,6 @@
-import { SidebarTrigger } from '@/components/ui/sidebar'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { HeaderInfo, SectionToMethods } from '@/types/common'
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 
 export interface PageHeaderProps {
   headerInfo: HeaderInfo[]

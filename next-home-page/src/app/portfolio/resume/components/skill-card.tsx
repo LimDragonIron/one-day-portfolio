@@ -1,12 +1,6 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle
-} from '@/components/ui/card'
+import React from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 import SkillCardItem from './skill-card-item'
 import { Separator } from '@/components/ui/separator'

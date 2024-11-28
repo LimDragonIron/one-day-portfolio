@@ -6,7 +6,6 @@ import SkillSection from './components/skill-section'
 import DownArrow from '@/components/common/down-arrow'
 import CareerSection from './components/career-section'
 import ProjectSection from './components/project-section'
-import { useScroll } from 'framer-motion'
 import { HeaderInfo } from '@/types/common'
 import PageHeader from './components/page-header'
 
@@ -17,37 +16,49 @@ const headers: HeaderInfo[] = [
   { title: 'CAREER', scrollIndex: 3 }
 ]
 
-export interface ResumePageProps {}
-
 const ResumePage = () => {
   const heroSectionRef = useRef<HTMLDivElement>(null)
   const skillSectionRef = useRef<HTMLDivElement>(null)
   const projectSectionRef = useRef<HTMLDivElement>(null)
   const careerSectionRef = useRef<HTMLDivElement>(null)
 
-  const { scrollY } = useScroll()
-
   const scrollToSection = useCallback((index: number) => {
     const isMobile = window.innerWidth < 800
     switch (index) {
       case 0:
         return window.scrollTo({
-          top: heroSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
+          top: heroSectionRef.current
+            ? heroSectionRef.current.offsetTop - (!isMobile ? 100 : 0)
+            : !isMobile
+              ? 100
+              : 0,
           behavior: 'smooth'
         })
       case 1:
         return window.scrollTo({
-          top: skillSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
+          top: skillSectionRef.current
+            ? skillSectionRef.current.offsetTop - (!isMobile ? 100 : 0)
+            : !isMobile
+              ? 100
+              : 0,
           behavior: 'smooth'
         })
       case 2:
         return window.scrollTo({
-          top: projectSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
+          top: projectSectionRef.current
+            ? projectSectionRef.current.offsetTop - (!isMobile ? 100 : 0)
+            : !isMobile
+              ? 100
+              : 0,
           behavior: 'smooth'
         })
       case 3:
         return window.scrollTo({
-          top: careerSectionRef.current?.offsetTop! - (!isMobile ? 100 : 0),
+          top: careerSectionRef.current
+            ? careerSectionRef.current.offsetTop - (!isMobile ? 100 : 0)
+            : !isMobile
+              ? 100
+              : 0,
           behavior: 'smooth'
         })
     }

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Card, CardContent, CardFooter, CardTitle } from '@/components/ui/card'
+import React from 'react'
+import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 

@@ -1,12 +1,10 @@
 'use client'
 
-import React, { ForwardedRef } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import IntroItem from './intro-Item'
 import SectionTitle from '@/components/common/section-title'
 import { motion } from 'framer-motion'
-
-export interface HeroSectionProps {}
 
 const title = 'FullStack 개발자 임용철'
 const desc = `학습을 통한 성장을 즐기며, 개발에 대한 열정을 끊임없이 이어가는 개발자입니다.`
@@ -80,5 +78,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
     )
   }
 )
+
+HeroSection.displayName = 'HereoSection'
 
 export default HeroSection

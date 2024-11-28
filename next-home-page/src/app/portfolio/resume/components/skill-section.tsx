@@ -1,11 +1,9 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import SkillCard from './skill-card'
 import { SkillList } from '@/types/common'
 import SectionTitle from '@/components/common/section-title'
 import { motion } from 'framer-motion'
-
-export interface SkillSectionProps {}
 
 const skillList: SkillList[] = [
   {
@@ -72,5 +70,7 @@ const SkillSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
     )
   }
 )
+
+SkillSection.displayName = 'SkillSection'
 
 export default SkillSection

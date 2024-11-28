@@ -2,8 +2,7 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 
-export interface DownArrowProps {}
-const DownArrow = ({ className }: any) => {
+const DownArrow = ({ className }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
     <motion.svg
       className={className}

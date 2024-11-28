@@ -1,5 +1,4 @@
 import { icons } from 'lucide-react'
-import { ForwardRefExoticComponent, RefAttributes } from 'react'
 
 export type SideItem = {
   title: string

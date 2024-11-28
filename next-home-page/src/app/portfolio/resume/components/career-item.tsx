@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { CareerInfo } from '@/types/common'
 import CareerDetail from './career-detail'
@@ -13,19 +13,20 @@ export interface CareerItemProps {
 
 const CareerItem = ({ info }: CareerItemProps) => {
   return (
-    <motion.div className='flex w-full max-w-[71.25rem] flex-col items-start justify-center gap-8 lg:flex-row'
-    initial={{ translateY: 0, opacity: 0 }}
+    <motion.div
+      className='flex w-full max-w-[71.25rem] flex-col items-start justify-center gap-8 lg:flex-row'
+      initial={{ translateY: 0, opacity: 0 }}
       whileInView={{
         translateY: -20,
-        opacity: 1,
+        opacity: 1
       }}
       transition={{
         delay: 0.6,
         x: { duration: 1 },
-        default: { ease: 'linear' },
+        default: { ease: 'linear' }
       }}
       viewport={{
-        once: true,
+        once: true
       }}
     >
       {/* 이미지 */}
@@ -42,16 +43,18 @@ const CareerItem = ({ info }: CareerItemProps) => {
       </div>
       <div className='flex w-full flex-col gap-4 border-t-2 border-gray-400 pl-0 pt-8 lg:border-l-2 lg:border-t-0 lg:pl-8 lg:pt-0'>
         <div>
-          <span className='md:text-2xl text-xl font-medium'>{info.companyName}</span>
+          <span className='text-xl font-medium md:text-2xl'>
+            {info.companyName}
+          </span>
         </div>
         <div>
-          <span className='md:text-xl text-lg text-gray-400'>{info.date}</span>
+          <span className='text-lg text-gray-400 md:text-xl'>{info.date}</span>
         </div>
         <div>
-          <span className='md:text-xl text-lg'>{info.companyDesc}</span>
+          <span className='text-lg md:text-xl'>{info.companyDesc}</span>
         </div>
         <div>
-          <span className='md:text-xl text-lg'>{info.role}</span>
+          <span className='text-lg md:text-xl'>{info.role}</span>
         </div>
         <Separator className='h-[2px] w-auto bg-sidebar-border' />
         {info.projectList.map(item => (

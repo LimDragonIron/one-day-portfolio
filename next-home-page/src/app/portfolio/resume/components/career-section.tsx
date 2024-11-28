@@ -1,10 +1,8 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import CareerItem from './career-item'
 import { careerList } from '@/constants/constants'
 import SectionTitle from '@/components/common/section-title'
-
-export interface CareerSectionProps {}
 
 const CareerSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
   (props, ref) => {
@@ -20,5 +18,7 @@ const CareerSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
     )
   }
 )
+
+CareerSection.displayName = 'CareerSection'
 
 export default CareerSection
