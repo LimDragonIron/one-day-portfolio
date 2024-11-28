@@ -8,10 +8,10 @@ export interface CareerDetailProps {
 const ListItem = ({ items, title }: { items: string[]; title: string }) => {
   return (
     <div>
-      <span className='text-xl'>{title}</span>
+      <span className='md:text-xl text-lg'>{title}</span>
       <ul className='list-disc pl-4'>
         {items.map((item, idx) => (
-          <li className='whitespace-break-spaces text-lg' key={idx}>
+          <li className='whitespace-break-spaces md:text-lg text-base' key={idx}>
             {item}
           </li>
         ))}
@@ -24,13 +24,13 @@ const CareerDetail = ({ detail }: CareerDetailProps) => {
   return (
     <div className='flex flex-col gap-4 pt-4'>
       <div>
-        <span className='text-xl font-semibold'>▎ {detail.title}</span>
+        <span className='md:text-xl font-semibold text-lg'>▎ {detail.title}</span>
       </div>
       <div>
         <span className='text-base text-gray-400'>{detail.date}</span>
       </div>
       <div>
-        <span className='whitespace-break-spaces text-lg'>
+        <span className='whitespace-break-spaces md:text-lg text-base'>
           {detail.abstract}
         </span>
       </div>
