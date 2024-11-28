@@ -21,7 +21,7 @@ const ProcjetItem = ({ images }: ProcjetItemProps) => {
         }}
         loop
         pagination={{ clickable: true }}
-        style={{ height: '100%', width: '100%' }}
+        style={{ height: '100%', width: '100%', minHeight: '300px' }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
