@@ -55,3 +55,9 @@ export type HeaderInfo = {
 export type SectionToMethods = {
   scrollToSection: (index: number) => void
 }
+
+export type linkInfo = {
+  imgPath: string
+  desc: string
+  href: string
+}

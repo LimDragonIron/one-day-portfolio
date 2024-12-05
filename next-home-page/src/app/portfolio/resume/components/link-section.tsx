@@ -1,11 +1,9 @@
-'use client'
-import React from 'react'
-import SkillCard from './skill-card'
 import SectionTitle from '@/components/common/section-title'
 import { motion } from 'framer-motion'
-import { skillList } from '@/constants/constants'
-
-const SkillSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
+import React from 'react'
+import { linkImages } from '@/constants/constants'
+import LinkItem from './link-item'
+const LinkSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
   (props, ref) => {
     return (
       <motion.div
@@ -25,17 +23,19 @@ const SkillSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
           once: true
         }}
       >
-        <SectionTitle title='SKILLS' />
-        <div className='grid grid-cols-1 justify-items-center gap-10 lg:grid-cols-2'>
-          {skillList.map(item => (
-            <SkillCard title={item.title} items={item.items} key={item.title} />
-          ))}
+        <SectionTitle title='ARCHIVING' />
+        <div className='flex w-full flex-col items-center justify-center gap-16 md:flex-row'>
+          {linkImages.length > 0
+            ? linkImages.map(item => (
+                <LinkItem key={item.desc} linkInfo={item} />
+              ))
+            : ''}
         </div>
       </motion.div>
     )
   }
 )
 
-SkillSection.displayName = 'SkillSection'
+LinkSection.displayName = 'LinkSection'
 
-export default SkillSection
+export default LinkSection

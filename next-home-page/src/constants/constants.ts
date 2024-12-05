@@ -1,4 +1,10 @@
-import { CareerInfo, ProjectDetail, ProjectInfo } from '@/types/common'
+import {
+  CareerInfo,
+  linkInfo,
+  ProjectDetail,
+  ProjectInfo,
+  SkillList
+} from '@/types/common'
 
 const projectListGX: ProjectDetail[] = [
   {
@@ -77,7 +83,7 @@ const projectListGX: ProjectDetail[] = [
 const projectListGinnov: ProjectDetail[] = [
   {
     title: '성과 관리 시스템 개발(교육 대학교)',
-    date: '2021.02 - 2022.10',
+    date: '2021.02 - 2021.10',
     abstract:
       '대학에 산재되어 있는 데이터를 통합적으로 수집하여 각종 지표를 시각화 하는 프로젝트',
     stackList: ['ETL: Python, Postgresql, Oracle', '시각화: Spotfire'],
@@ -257,5 +263,84 @@ export const projectCardList: ProjectInfo[] = [
       url: 'https://apkpure.com/kr/mollangdefense/com.Limd.Mallang',
       stackList: ['Unity 2D']
     }
+  }
+]
+
+export const linkImages: linkInfo[] = [
+  {
+    imgPath: 'github.png',
+    desc: '개인 깃허브 ',
+    href: 'https://github.com/LimDragonIron'
+  },
+  {
+    imgPath: 'blog.png',
+    desc: '개인 블로그',
+    href: 'https://ggonmerlimd.tistory.com/'
+  }
+]
+
+export const aboutMeTitle = 'FullStack 개발자 임용철'
+export const aboutDesc = `학습을 통한 성장을 즐기며, 개발에 대한 열정을 끊임없이 이어가는 개발자입니다.`
+
+export const introItems = [
+  {
+    title: '이름',
+    content: '임용철'
+  },
+  {
+    title: '생년월일',
+    content: '1990.02.27'
+  },
+  {
+    title: '이메일',
+    content: 'ciyciygood@gmail.com'
+  }
+]
+
+export const subDesc = [
+  '깨끗하고 효율적인 코드를 작성하기 위한 노력',
+  '끊임없는 개선을 통해 더 나은 소프트웨어를 만들고자 하는 열정',
+  '사용자 중심의 개발 철학을 바탕으로 가치 있는 제품을 만들고자 하는 의지',
+  '협업을 통해 시너지를 창출하고 함께 성장하고자 하는 마음으로 개발을 하고 있습니다'
+]
+
+//SKill
+
+export const skillList: SkillList[] = [
+  {
+    title: 'FrontEnd',
+    items: [
+      { imgPath: 'html5.png' },
+      { imgPath: 'css.png' },
+      { imgPath: 'js.png' },
+      { imgPath: 'ts.png' },
+      { imgPath: 'next.png' },
+      { imgPath: 'react.png' },
+      { imgPath: 'vue.png' },
+      { imgPath: 'tailwind.png' }
+    ]
+  },
+  {
+    title: 'BackEnd',
+    items: [
+      { imgPath: 'nest.png' },
+      { imgPath: 'mysql.png' },
+      { imgPath: 'postgresql.png' },
+      { imgPath: 'typeorm.png' },
+      { imgPath: 'langchain.png' },
+      { imgPath: 'nodejs.png' }
+    ]
+  },
+  {
+    title: 'Deployment',
+    items: [{ imgPath: 'amazon.png' }, { imgPath: 'docker.png' }]
+  },
+  {
+    title: 'Extra',
+    items: [
+      { imgPath: 'jira-confluence.png' },
+      { imgPath: 'unity.png' },
+      { imgPath: 'opencv.png' }
+    ]
   }
 ]

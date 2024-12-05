@@ -8,7 +8,13 @@ export default async function ProfileLayout({
   children
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <main className='p-4'>
+    <main
+      className={`overflow-y-scroll p-4 [&::-webkit-scrollbar]:hidden`}
+      style={{
+        scrollbarWidth: 'none',
+        msOverflowStyle: 'none'
+      }}
+    >
       {/* <SidebarTrigger/> */}
       {children}
     </main>

@@ -5,23 +5,12 @@ import Image from 'next/image'
 import IntroItem from './intro-Item'
 import SectionTitle from '@/components/common/section-title'
 import { motion } from 'framer-motion'
-
-const title = 'FullStack 개발자 임용철'
-const desc = `학습을 통한 성장을 즐기며, 개발에 대한 열정을 끊임없이 이어가는 개발자입니다.`
-const introItems = [
-  {
-    title: '이름',
-    content: '임용철'
-  },
-  {
-    title: '생년월일',
-    content: '1990.02.27'
-  },
-  {
-    title: '이메일',
-    content: 'ciycigood@gmail.com'
-  }
-]
+import {
+  introItems,
+  aboutMeTitle,
+  aboutDesc,
+  subDesc
+} from '@/constants/constants'
 
 const HeroSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
   (props, ref) => {
@@ -58,11 +47,24 @@ const HeroSection = React.forwardRef<HTMLDivElement, React.PropsWithChildren>(
           </div>
           <div className='flex flex-col items-center gap-4 lg:items-start'>
             <h1 className='font-bold md:text-xl lg:text-2xl xl:text-3xl'>
-              {title}
+              {aboutMeTitle}
             </h1>
             <span className='font-semibold md:text-base lg:text-xl xl:text-2xl'>
-              {desc}
+              {aboutDesc}
             </span>
+            {subDesc.length > 0
+              ? subDesc.map((item, idx) => (
+                  <motion.span
+                    className='md:text-base lg:text-lg xl:text-xl'
+                    initial={{ x: '100vw', opacity: 1 }}
+                    animate={{ x: '0', opacity: 1 }}
+                    transition={{ duration: 1 + idx * 0.1 }}
+                    key={item}
+                  >
+                    {item}
+                  </motion.span>
+                ))
+              : ''}
             <div className='flex flex-col gap-1'>
               {introItems.map(item => (
                 <IntroItem

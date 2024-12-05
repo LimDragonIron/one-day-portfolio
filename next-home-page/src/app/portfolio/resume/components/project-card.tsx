@@ -32,7 +32,7 @@ const ProjectCard = ({ info }: ProjectCardProps) => {
         once: true
       }}
     >
-      <Card className='flex h-[1080] w-full flex-col gap-4 p-4 lg:h-[660px]'>
+      <Card className='flex w-full flex-col gap-4 p-4 lg:h-[660px]'>
         <CardTitle className='flex items-center justify-center text-lg md:text-2xl'>
           {info.detail.title}
         </CardTitle>

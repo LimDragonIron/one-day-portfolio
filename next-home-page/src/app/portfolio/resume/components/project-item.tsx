@@ -24,7 +24,7 @@ const ProcjetItem = ({ images }: ProcjetItemProps) => {
         style={{ height: '100%', width: '100%', minHeight: '480px' }}
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index} className='w-full h-full'>
+          <SwiperSlide key={index} className='h-full w-full'>
             <Image
               src={image}
               fill
