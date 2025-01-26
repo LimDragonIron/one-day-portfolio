@@ -364,7 +364,7 @@ export const aboutMeVisionDesc = [
 ]
 
 export const jokes = [
-  '  저에 직업을 맞혀보세요.',
+  '  저의 직업을 맞혀보세요.',
   '  저는..거북목이 있습니다. ',
   ' 저는..어깨가 말려 있습니다.',
   '저는.. 허리 통증이 있습니다.',
