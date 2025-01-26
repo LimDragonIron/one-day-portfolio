@@ -8,8 +8,8 @@ export interface SkillItemProps {
 }
 const SkillCardItem = ({ imgPath }: SkillItemProps) => {
   return (
-    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-      <Card className='flex h-[120px] w-[120px] items-center justify-center p-4 dark:bg-gray-100 lg:h-[120px] lg:w-[120px] xl:h-[120px] xl:w-[172px] 2xl:h-[128px] 2xl:w-[256px]'>
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
+      <Card className='flex h-[120px] w-[120px] items-center justify-center p-4 dark:bg-gray-100 md:h-[128px] md:w-[256px] lg:h-[120px] lg:w-[120px] xl:h-[120px] xl:w-[172px] 2xl:h-[128px] 2xl:w-[256px]'>
         <CardContent className='relative flex h-full w-full'>
           <Image
             src={`/images/` + imgPath}

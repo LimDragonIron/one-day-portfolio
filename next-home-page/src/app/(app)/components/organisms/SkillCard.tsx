@@ -2,7 +2,7 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-import SkillCardItem from './skill-card-item'
+import SkillCardItem from '../atoms/SkillCardItem'
 import { Separator } from '@/components/ui/separator'
 import { SkillItem } from '@/types/common'
 
@@ -13,12 +13,12 @@ export interface SkillCardProps {
 
 const SkillCard = ({ title, items }: SkillCardProps) => {
   return (
-    <Card className='w-[300px] lg:w-[320px] xl:w-[420px] 2xl:w-[600px]'>
+    <Card className='flex flex-col items-center justify-center'>
       <CardHeader className='flex items-center justify-center gap-2'>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className='text-3xl'>{title}</CardTitle>
         <Separator />
       </CardHeader>
-      <CardContent className='grid grid-cols-2 items-center gap-8'>
+      <CardContent className='grid grid-cols-2 items-center justify-center gap-4'>
         {items.map(item => (
           <SkillCardItem key={item.imgPath} imgPath={item.imgPath} />
         ))}

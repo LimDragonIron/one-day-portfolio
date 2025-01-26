@@ -8,11 +8,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  if (pathName === '/') {
-    return NextResponse.next()
-  }
-
-  if (pathName !== '/portfolio/resume') {
+  if (pathName !== '/') {
     return NextResponse.redirect(new URL('/', request.url))
   }
 

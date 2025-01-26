@@ -5,7 +5,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import React from 'react'
-import ProcjetItem from './project-item'
+import ProcjetItem from './ProjectItem'
 import { ProjectInfo } from '@/types/common'
 import { Separator } from '@radix-ui/react-separator'
 import Link from 'next/link'
@@ -17,7 +17,7 @@ export interface ProjectCardProps {
 const ProjectCard = ({ info }: ProjectCardProps) => {
   return (
     <motion.div
-      className='flex h-full w-full flex-col gap-4 p-4'
+      className='mt-16 flex w-full justify-center gap-4 p-4'
       initial={{ translateY: 0, opacity: 0 }}
       whileInView={{
         translateY: -20,
@@ -37,11 +37,10 @@ const ProjectCard = ({ info }: ProjectCardProps) => {
           {info.detail.title}
         </CardTitle>
         <CardDescription className='flex justify-center'>
-          <span className='whitespace-nowrap text-sm md:text-xl'>
+          <span className='whitespace-nowrap text-sm md:text-xl lg:text-2xl'>
             {info.detail.dateAndparticipants}
           </span>
         </CardDescription>
-        {/* <CardContent className='flex h-full w-full flex-col items-center justify-center gap-20 p-4 lg:flex-row'> */}
         <CardContent className='flex h-full flex-col justify-center gap-2 lg:flex-row lg:gap-20'>
           <div className='flex-1 items-center justify-center lg:w-1/2'>
             <ProcjetItem images={info.images} />
@@ -49,7 +48,9 @@ const ProjectCard = ({ info }: ProjectCardProps) => {
           <div className='flex-1 lg:w-1/2'>
             <div className='flex h-full flex-col justify-between'>
               <div className='flex'>
-                <span className='text-base md:text-lg'>{info.detail.desc}</span>
+                <span className='text-base md:text-lg lg:text-2xl'>
+                  {info.detail.desc}
+                </span>
               </div>
               <div className='flex flex-col gap-4'>
                 <Separator className='h-[2px] w-full bg-gray-400' />

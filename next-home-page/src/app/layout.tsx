@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import Providers from '@/components/ui/provider'
 import { cn } from '@/lib/utils'
 
 const geistSans = localFont({
@@ -27,14 +26,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body
-        className={cn(
-          'flex min-h-screen flex-col',
-          geistSans.variable,
-          geistMono.variable
-        )}
-      >
-        <Providers>{children}</Providers>
+      <body className={cn(geistSans.variable, geistMono.variable)}>
+        {children}
       </body>
     </html>
   )

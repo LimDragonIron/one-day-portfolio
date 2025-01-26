@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { CareerInfo } from '@/types/common'
-import CareerDetail from './career-detail'
+import CareerDetail from '../atoms/CareerDetail'
 import { Separator } from '@radix-ui/react-separator'
 import { motion } from 'framer-motion'
 
@@ -30,7 +30,7 @@ const CareerItem = ({ info }: CareerItemProps) => {
       }}
     >
       {/* 이미지 */}
-      <div className='flex items-end justify-center dark:bg-gray-100 lg:items-start'>
+      <div className='flex w-full items-end justify-center bg-white lg:items-start'>
         <Image
           src={info.imgPath}
           alt=''
